@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/test-api/test-api.iml" filepath="$PROJECT_DIR$/test-api/test-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/test-base/test-base.iml" filepath="$PROJECT_DIR$/test-base/test-base.iml" />
+      <module fileurl="file://$PROJECT_DIR$/test-base/test-base-repository/test-base-repository.iml" filepath="$PROJECT_DIR$/test-base/test-base-repository/test-base-repository.iml" />
+      <module fileurl="file://$PROJECT_DIR$/test-common/test-common.iml" filepath="$PROJECT_DIR$/test-common/test-common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/test-common/test-common-unit/test-common-unit.iml" filepath="$PROJECT_DIR$/test-common/test-common-unit/test-common-unit.iml" />
+      <module fileurl="file://$PROJECT_DIR$/test-core/test-core.iml" filepath="$PROJECT_DIR$/test-core/test-core.iml" />
+      <module fileurl="file://$PROJECT_DIR$/test-core/test-core-cache/test-core-cache.iml" filepath="$PROJECT_DIR$/test-core/test-core-cache/test-core-cache.iml" />
+      <module fileurl="file://$PROJECT_DIR$/test-core/test-core-dao/test-core-dao.iml" filepath="$PROJECT_DIR$/test-core/test-core-dao/test-core-dao.iml" />
+      <module fileurl="file://$PROJECT_DIR$/test-core/test-core-log/test-core-log.iml" filepath="$PROJECT_DIR$/test-core/test-core-log/test-core-log.iml" />
+      <module fileurl="file://$PROJECT_DIR$/test-core/test-core-serivce/test-core-serivce.iml" filepath="$PROJECT_DIR$/test-core/test-core-serivce/test-core-serivce.iml" />
+      <module fileurl="file://$PROJECT_DIR$/test-parent.iml" filepath="$PROJECT_DIR$/test-parent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/test-service/test-service.iml" filepath="$PROJECT_DIR$/test-service/test-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/test-service/test-service-userinfo/test-service-userinfo.iml" filepath="$PROJECT_DIR$/test-service/test-service-userinfo/test-service-userinfo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/test-web/test-web.iml" filepath="$PROJECT_DIR$/test-web/test-web.iml" />
+      <module fileurl="file://$PROJECT_DIR$/test-web/test-web-userinfo/test-web-userinfo.iml" filepath="$PROJECT_DIR$/test-web/test-web-userinfo/test-web-userinfo.iml" />
+    </modules>
+  </component>
+</project>

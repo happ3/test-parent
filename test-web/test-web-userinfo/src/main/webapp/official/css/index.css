@@ -1,0 +1,164 @@
+.navbar {
+	margin-bottom: 0;
+	border: 0;
+	border-radius: 0;
+}
+
+.contcss {
+	color: #fff;
+}
+
+.firstpage {
+	margin-top: 50px;
+	font-size: 16px;
+}
+
+.secpage {
+	margin-top: 50px;
+}
+
+
+.containerfont {
+	background-image: url('../img/banner_06.png');
+	height: 500px;
+	background-repeat: no-repeat;
+	-moz-background-size: 100% 100%;
+	background-size: 100% 100%;
+	padding-top: 90px;
+}
+
+
+.media-center{
+	padding: 20px;
+}
+.media-heading{
+	padding: 20px;
+}
+.media-body{
+	padding-bottom: 60px;
+}
+
+.wordcss {
+	padding-top: 90px;
+	height: 500px;
+	line-height: 80px;
+}
+
+.wordcss div:nth-child(1) {
+	font-size: 5.0vh;
+	font-family: 'STXingkai';
+}
+
+.sectitle {
+	font-size: 5.0vh;
+	text-align: center;
+}
+
+.row .ingcss:nth-child(3){
+	padding-left: 5px;	
+}
+
+
+
+@media ( min-width : 480px) {
+	.containerfont{
+		padding-top: 10px;
+	}
+	.img1{
+		height:70px;
+		padding-left: 12%;
+	}
+	.img2{
+		height:70px;
+	}
+	.img3{
+		height:70px;
+	}
+	.img4{
+		height:70px;
+		padding-left: 12%;
+	}
+	.img5{
+		height:70px;
+	}
+}
+
+
+@media ( max-width : 768px)  {
+	.containerfont{
+		padding-top: 10px;
+	}
+	
+	.img1{
+		height:70px;
+		padding-left: 12%;
+	}
+	.img2{
+		height:70px;
+	}
+	.img3{
+		height:70px;
+	}
+	.img4{
+		height:70px;
+		padding-left: 12%;
+	}
+	.img5{
+		height:70px;
+	}
+}
+
+@media (min-width: 768px) and (max-width: 980px) {
+
+		.containerfont{
+			padding-top: 10px;
+		}
+	.ingcss{
+		width: 18.33333333%;
+	}	
+		
+	.img1{
+		padding-left: 90%;
+	}
+	.img2{
+		padding-left: 70%;
+	}
+	.img3{
+		padding-left: 50%;
+	}
+	.img4{
+		padding-left: 30%;
+	}
+	.img5{
+		padding-left: 20%;
+	}
+		
+ }
+
+@media (min-width: 1200px) { 	
+	.containerfont{
+		padding: 10px;
+	}
+		
+	.img1{
+		height:110px;
+		padding-left: 135%;
+	}
+	.img2{
+		height:110px;
+		padding-left: 112%;
+	}
+	.img3{
+		height:110px;
+		padding-left: 85%;
+	}
+	.img4{
+	height:110px;
+		padding-left: 60%;
+	}
+	.img5{
+		height:110px;
+		padding-left: 35%;
+	}
+ }
+

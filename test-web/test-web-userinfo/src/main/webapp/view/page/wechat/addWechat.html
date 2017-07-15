@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>AdminLTE 2 | 404 Page not found</title>
+  <!-- Tell the browser to be responsive to screen width -->
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+  <script type="application/javascript" src="../../../js/common.js"></script>
+  <link rel="stylesheet" href="../../../css/bootstrapValidator.min.css">
+
+  <script type="application/javascript" src="../../../js/bootstrapValidator.min.js"></script>
+  <script type="application/javascript" src="../../js/wechat/addWechat.js"></script>
+  <script type="application/javascript" src="../../../js/jquery.form.js"></script>
+  
+</head>
+<body class="hold-transition skin-blue sidebar-mini">
+
+<section>
+  <div class="col-lg-8 col-lg-offset-2">
+
+
+    <form id="wxpayForm" method="post" class="form-horizontal" action="target.php">
+      <div class="form-group">
+        <label class="col-lg-3 control-label">配置名称</label>
+        <div class="col-lg-4">
+          <input type="text" class="form-control" name="configName"  />
+      </div>
+
+      </div>
+
+      <div class="form-group">
+        <label class="col-lg-3 control-label">商户号:</label>
+        <div class="col-lg-5">
+          <input type="text" class="form-control" name="mchId" placeholder="微信商户号"/>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="col-lg-3 control-label">appid:</label>
+        <div class="col-lg-5">
+          <input type="text" class="form-control" name="appid" placeholder="公众账号appid"/>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="col-lg-3 control-label">appSecret:</label>
+        <div class="col-lg-5">
+          <input type="password" class="form-control" name="appSecret"  placeholder="公众账号appSecret"/>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="col-lg-3 control-label">appidKey:</label>
+        <div class="col-lg-5">
+          <input type="password" class="form-control" name="appidKey" placeholder="公众账号apiKey"/>
+        </div>
+      </div>
+
+    <!--   <div class="form-group">
+        <label class="col-lg-3 control-label">商家证书:</label>
+        <div class="col-lg-5">
+          <input type="password" class="form-control" name="keyStoreId" />
+        </div>
+      </div> -->
+
+      <!-- <div class="form-group">
+        <label class="col-lg-3 control-label">证书密码:</label>
+        <div class="col-lg-5">
+          <input type="password" class="form-control" name="certPassword" />
+        </div>
+      </div> -->
+    <div class="form-group">
+        <div class="col-lg-9 col-lg-offset-3">
+          <button type="button" id="btnsave" class="btn btn-primary" name="signup" value="Sign up">提交</button>
+          <button type="button" class="btn btn-info" id="resetBtn">重置</button>
+        </div>
+      </div>
+      <input type="hidden" name="merchantId" id="merchantId">
+      <input type="hidden" name="agentId" id="agentId">
+    </form>
+  </div>
+</section>
+
+
+</body>
+</html>

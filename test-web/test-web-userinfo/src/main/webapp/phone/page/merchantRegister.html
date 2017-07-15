@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+    <title>WeUI</title>
+  <link rel="stylesheet" href="../style/weui.css" />
+<link rel="stylesheet" href="../style/mui.min.css" />
+<link rel="stylesheet" href="../style/app.css" />
+<link rel="stylesheet" href="../style/mui.picker.css" />
+<link rel="stylesheet" href="../style/mui.poppicker.css" />
+<script src="../js/zepto.min.js"></script>
+<script src="../js/mui.min.js"></script>
+<script src="../js/mui.picker.js"></script>
+<script src="../js/mui.poppicker.js"></script>
+<script src="../js/city.data.js"></script>
+<script src="../js/city.data-3.js"></script>
+<style type="text/css">
+.mui-backdrop {
+	position: fixed;
+	z-index: 998;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background-color: rgba(0, 0, 0, .3)
+}
+</style>
+
+<script>
+			(function($, doc) {
+				$.init();
+				$.ready(function() {
+					//普通示例
+					var userPicker = new $.PopPicker();
+					userPicker.setData([{
+						value: 'ywj',
+						text: '餐饮'
+					}, {
+						value: 'aaa',
+						text: '休闲娱乐'
+					}, {
+						value: 'lj',
+						text: '购物'
+					}, {
+						value: 'ymt',
+						text: '休闲服务'
+					}, {
+						value: 'shq',
+						text: '酒店旅游'
+					}, {
+						value: 'shq',
+						text: '其他行业'
+					}]);
+					var showUserPickerButton = doc.getElementById('showUserPicker');
+						showUserPickerButton.addEventListener('tap', function(event) {
+						userPicker.show(function(items) {
+							debugger
+							 document.getElementById("showUserPickerText").value = items[0].text;
+							//返回 false 可以阻止选择框的关闭
+							//return false;
+						});
+					}, false);
+					//-----------------------------------------
+					//级联示例
+// 					var cityPicker = new $.PopPicker({
+// 						layer: 2
+// 					});
+// 					cityPicker.setData(cityData);
+// 					var showCityPickerButton = doc.getElementById('showCityPicker');
+// 					var cityResult = doc.getElementById('cityResult');
+// 					showCityPickerButton.addEventListener('tap', function(event) {
+// 						cityPicker.show(function(items) {
+// 							cityResult.innerText = "你选择的城市是:" + items[0].text + " " + items[1].text;
+// 							//返回 false 可以阻止选择框的关闭
+// 							//return false;
+// 						});
+// 					}, false);
+					//-----------------------------------------
+					//					//级联示例
+ 					var cityPicker3 = new $.PopPicker({
+ 						layer: 3
+ 					});
+ 					cityPicker3.setData(cityData3);
+ 					var showCityPickerButton = doc.getElementById('showCityPicker3');
+ 					var cityResult3 = doc.getElementById('cityResult3');
+ 					showCityPickerButton.addEventListener('tap', function(event) {
+ 						cityPicker3.show(function(items) {
+ 							cityResult3.innerText = "你选择的城市是:" + (items[0] || {}).text + " " + (items[1] || {}).text + " " + (items[2] || {}).text;
+ 							//返回 false 可以阻止选择框的关闭
+// 							//return false;
+ 						});
+ 					}, false);
+				});
+			})(mui, document);
+		</script>
+</head>
+
+
+<body >
+  <div class="weui-toptips weui-toptips_warn js_tooltips">错误提示</div>
+    <div class="container" id="container"></div>
+
+<div class="page">
+    <div class="page__hd">
+        <h1 class="page__title">Input</h1>
+        <p class="page__desc">表单输入</p>
+    </div>
+     <div class="page__ft">
+        <a href="javascript:home()"><img src="../images/icon_footer_link.png" /></a>
+    </div>
+    <div class="page__bd">
+     
+
+
+        <div class="weui-cells__title" style="color: #000; font-size: 17px;">店铺名称</div>
+        <div class="weui-cells">
+            <div class="weui-cell">
+                <div class="weui-cell__bd">
+                    <input class="weui-input" type="text" placeholder="请输入店铺名称"/>
+                </div>
+            </div>
+        </div>
+        <div class="weui-cells__title" style="color: #000; font-size: 17px;">联系人姓名</div>
+        <div class="weui-cells">
+            <div class="weui-cell">
+                <div class="weui-cell__bd">
+                    <input class="weui-input" type="text" placeholder="请输入联系人姓名"/>
+                </div>
+            </div>
+        </div>
+        <div class="weui-cells__title" style="color: #000; font-size: 17px;">手机号码</div>
+        <div class="weui-cells">
+        <div class="weui-cell weui-cell_select weui-cell_select-before">
+                <div class="weui-cell__hd">
+                    <select class="weui-select" name="select2">
+                        <option value="1">+86</option>
+                        <option value="2">+80</option>
+                        <option value="3">+84</option>
+                        <option value="4">+87</option>
+                    </select>
+                </div>
+                <div class="weui-cell__bd">
+                    <input class="weui-input" type="number" pattern="[0-9]*" placeholder="请输入号码"/>
+                </div>
+            </div>
+        </div>
+       
+        <div class="weui-cells__title" style="color: #000; font-size: 17px;">所在行业</div>
+        <div class="weui-cells">
+            <div class="weui-cell weui-cell_vcode" id='showUserPicker'>
+                <div class="weui-cell__bd">
+                   	<input  class="weui-input"
+							style="cursor: pointer" placeholder="请选择所在行业" readonly="readonly"
+							type="text"></input>
+                </div>
+                <div class="weui-cell__ft">
+						<a href="javascript:;" class="weui-vcode-btn"
+							style="border-left: 0; color: #efeff4;">▼</a>
+					</div>
+            </div>
+        </div>
+        
+        <div class="weui-cells__title" style="color: #000; font-size: 17px;">所在区域</div>
+        <div class="weui-cells">
+            <div class="weui-cell weui-cell_vcode" id='showCityPicker3'>
+                <div class="weui-cell__bd">
+                   	<input  class="weui-input"
+							style="cursor: pointer" placeholder="请选择所在区域" readonly="readonly"
+							type="text"></input>
+                </div>
+                <div class="weui-cell__ft">
+						<a href="javascript:;" class="weui-vcode-btn"
+							style="border-left: 0; color: #efeff4;">▼</a>
+					</div>
+            </div>
+        </div>
+        
+        <div class="weui-cells__title" style="color: #000; font-size: 17px;">详细地址</div>
+        <div class="weui-cells">
+            <div class="weui-cell">
+                <div class="weui-cell__bd">
+                    <input class="weui-input" type="text" placeholder="请输入详细地址"/>
+                </div>
+            </div>
+        </div>
+
+        <div class="weui-cells__title" style="color: #000; font-size: 17px;">留言</div>
+        <div class="weui-cells weui-cells_form">
+            <div class="weui-cell">
+                <div class="weui-cell__bd">
+                    <textarea class="weui-textarea" placeholder="请输入文本" rows="3"></textarea>
+                    <div class="weui-textarea-counter"><span>0</span>/200</div>
+                </div>
+            </div>
+        </div>
+
+
+   		<div class="weui-cells__title">表单报错</div>
+        <div class="weui-cells weui-cells_form">
+            <div class="weui-cell weui-cell_warn">
+                <div class="weui-cell__hd"><label for="" class="weui-label">卡号</label></div>
+                <div class="weui-cell__bd">
+                    <input class="weui-input" type="number" pattern="[0-9]*" value="weui input error" placeholder="请输入卡号"/>
+                </div>
+                <div class="weui-cell__ft">
+                    <i class="weui-icon-warn"></i>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="weui-btn-area">
+            <a class="weui-btn weui-btn_primary" href="javascript:" id="showTooltips">确定</a>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+    $(function(){
+        var $tooltips = $('.js_tooltips');
+
+        $('#showTooltips').on('click', function(){
+            if ($tooltips.css('display') != 'none') return;
+
+            // toptips的fixed, 如果有`animation`, `position: fixed`不生效
+            $('.page.cell').removeClass('slideIn');
+
+            $tooltips.css('display', 'block');
+            setTimeout(function () {
+                $tooltips.css('display', 'none');
+            }, 2000);
+        });
+    });
+</script>
+  
+</body>
+</html>

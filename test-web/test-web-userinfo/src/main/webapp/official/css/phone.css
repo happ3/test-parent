@@ -1,0 +1,124 @@
+.navbar {
+	margin-bottom: 0;
+	border: 0;
+	border-radius: 0;
+}
+#footer{
+	border-top:0;
+}
+
+
+
+
+.containerfont {
+	background-image: url('../img/img_bj_25.png');
+	height: 650px;
+	background-repeat: no-repeat;
+	-moz-background-size: 100% 100%;
+	background-size: 100% 100%;
+	padding-top: 150px;
+	text-align: center;
+}
+
+/*任务达人 start */
+.wordrcss{
+	padding-top:15%;
+	font-size: 5.1vh;
+	text-align: right;
+}
+
+.wordheardr{
+	padding-top: 50px;
+	float: right;
+}
+.wordheardr p{
+	font-size: 2.2vh;
+	color: #66666;
+}
+.wordheardr span{
+	color: #f26522;
+	font-weight: bold;	
+}
+
+
+.wordtextr{
+	width:100%;
+	padding-top: 10%;
+	line-height: 4vh;
+	float: right;
+}
+
+.wordtextr p{
+	font-size: 1.6vh;
+	color: #33333;
+	float: right;
+}
+/*任务达人 end */
+
+/*邀请达人 start */
+.wordltcss{
+	padding-top:15%;
+	font-size: 5.1vh;
+	text-align: left;
+}
+
+.wordheardl{
+	padding-top: 50px;
+	float: left;
+}
+
+.wordheardl p{
+	font-size: 2.2vh;
+	color: #66666;
+}
+
+.wordheardl span{
+	color: #f26522;
+	font-weight: bold;	
+}
+
+.wordtextl{
+	width:100%;
+	padding-top: 10%;
+	line-height: 4vh;
+	float: left;
+}
+
+.wordtextl p{
+	font-size: 1.6vh;
+	color: #33333;
+	float: left;
+}
+/*邀请达人 end */
+
+
+.secfooter{
+	padding-top: 5%;
+	padding-bottom: 5%;
+}
+
+.secfootertext div:nth-child(1){
+	font-size: 5.5vh;
+}
+
+.secfootertext div:nth-child(2){
+	padding:50px;
+	font-size: 2.2vh;
+	padding-bottom: 10%;
+}
+
+.sevimg{
+	display: block;
+    padding: 4px;
+    margin-bottom: 20px;
+    line-height: 1.42857143;
+}
+
+.row h4{
+	text-align: center;
+}
+.row {
+	text-align: -webkit-center;
+}
+
+
